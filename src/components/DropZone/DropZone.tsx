@@ -10,7 +10,7 @@ interface Props {
 export const DropZone: React.FC<Props> = ({ onChange }) => {
 	return (
 		<CustomDiv>
-			<Drop onChange={(e) => onChange(e)}></Drop>
+			<Drop onChange={onChange}></Drop>
 			<CustomDiv></CustomDiv>
 		</CustomDiv>
 	);

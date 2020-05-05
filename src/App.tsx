@@ -1,14 +1,17 @@
 import * as React from "react";
-import { Navbar } from "./components/Navbar/Navbar";
 import { hot } from "react-hot-loader/root";
 import { Page } from "./layouts/Page";
-import { DropZone } from "leda";
+import Documents from "./containers/DocumentByText/Documents";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const App: React.FC = (props) => {
 	return (
-		<Page>
-			<DropZone />
-		</Page>
+		<Provider store={store}>
+			<Page>
+				<Documents />
+			</Page>
+		</Provider>
 	);
 };
 
